@@ -1,5 +1,5 @@
 import React from 'react';
-import "./AvatarCircle.css"
+import "../../style/AvatarCircle.css"
 
 class AvatarCircle extends React.Component {
 

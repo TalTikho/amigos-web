@@ -1,0 +1,117 @@
+:root {
+    /* Main Colors */
+    --color-primary: #cc00ff;
+    --color-primary-tinted: #d15aff;
+    --color-primary-outline: #660099;
+    --color-secondary: #a051ff;
+
+    /* Text Colors */
+    --color-text: #ffffff;
+    --color-text-muted: #c9c4d3;
+    --color-text-tinted: #c5a6d9;
+
+    /* Backgrounds */
+    --color-bg: #1e1e2f;
+    --color-bg-hover: #2a2a3f;
+    --color-popup-bg: #2a2a3f;
+    --color-form-bg: #2e2e40;
+    --color-form-bg-focused: #3a3a52;
+
+    /* Borders and Shadows */
+    --color-border: #555;
+    --color-border-hover: #777;
+    --color-shadow: rgba(75, 0, 130, 0.8);
+    --color-card-shadow: rgba(75, 0, 130, 0.5);
+    --color-popup-shadow: #3a2a52;
+
+    /* App Bar */
+    --color-appbar-bg-1: #3b1f58;
+    --color-appbar-bg-2: #2e1641;
+
+    /* Links */
+    --color-link: #cc00ff;
+    --color-link-hover: #d35bff;
+
+    /* Font Sizes */
+    --font-size-title: 26pt;
+    --font-size-subtitle: 18pt;
+    --font-size-body: 15pt;
+    --font-size-small: 12pt;
+    --font-size-tiny: 10pt;
+
+    /* Spacing and Radius */
+    --padding-page: 20px;
+    --padding-card: 20px;
+    --border-radius-card: 16px;
+    --border-radius-btn: 10px;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    /* Main Colors */
+    --color-primary: #cc00ff;
+    --color-primary-tinted: #d15aff;
+    --color-primary-outline: #660099;
+    --color-secondary: #a051ff;
+
+    /* Text Colors */
+    --color-text: #ffffff;
+    --color-text-muted: #c9c4d3;
+    --color-text-tinted: #c5a6d9;
+
+    /* Backgrounds */
+    --color-bg: #1e1e2f;
+    --color-popup-bg: #2a2a3f;
+    --color-form-bg: #2e2e40;
+    --color-form-bg-focused: #3a3a52;
+
+    /* Borders and Shadows */
+    --color-border: #555;
+    --color-border-hover: #777;
+    --color-shadow: rgba(75, 0, 130, 0.8);
+    --color-card-shadow: rgba(75, 0, 130, 0.5);
+    --color-popup-shadow: #3a2a52;
+
+    /* App Bar */
+    --color-appbar-bg-1: #3b1f58;
+    --color-appbar-bg-2: #2e1641;
+
+    /* Links */
+    --color-link: #cc00ff;
+    --color-link-hover: #d35bff;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    /* Main Colors */
+    --color-primary: #cc00ff;
+    --color-primary-tinted: #d15aff;
+    --color-primary-outline: #660099;
+    --color-secondary: #a051ff;
+
+    /* Text Colors */
+    --color-text: #2e2e2e;
+    --color-text-muted: #555;
+    --color-text-tinted: #775b89;
+
+    /* Backgrounds */
+    --color-bg: #f8f5ff;
+    --color-popup-bg: #f3e9ff;
+    --color-form-bg: #f5ebff;
+    --color-form-bg-focused: #e7d7ff;
+
+    /* Borders and Shadows */
+    --color-border: #8e8e91;
+    --color-border-hover: #aaa;
+    --color-shadow: rgba(150, 120, 200, 0.5);
+    --color-card-shadow: rgba(150, 120, 200, 0.4);
+    --color-popup-shadow: #d3a6ff;
+
+    /* App Bar */
+    --color-appbar-bg-1: #cc00ff;
+    --color-appbar-bg-2: #ab00e5;
+
+    /* Links */
+    --color-link: #cc00ff;
+    --color-link-hover: #d35bff;
+}

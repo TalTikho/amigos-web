@@ -1,0 +1,96 @@
+/* Signup.css */
+
+.signup-container {
+    width: 360px;
+    margin: 80px auto;
+    padding: 30px 40px;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.signup-container h2 {
+    font-size: var(--font-size-title);
+    color: var(--color-primary);
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.signup-container input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: var(--font-size-body);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-btn);
+    background-color: var(--color-form-bg);
+    color: var(--color-text);
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.signup-container input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: var(--color-form-bg-focused);
+}
+
+.signup-container .signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    border-radius: var(--border-radius-btn);
+    cursor: pointer;
+    font-size: var(--font-size-body);
+    margin-top: 40px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px var(--color-shadow);
+}
+
+.signup-container .signup-button:hover {
+    background-color: var(--color-primary-tinted);
+    box-shadow: 0 6px 25px var(--color-shadow);
+}
+
+.signup-container .signup-button:disabled {
+    background-color: var(--color-primary-outline);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.signup-container .avatars-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.signup-container .avatar-item {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.signup-container .avatar-item.selected {
+    border-color: var(--color-primary);
+}
+
+.signup-container .link-to-login {
+    display: block;
+    margin-top: 30px;
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signup-container .link-to-login:hover {
+    color: var(--color-primary-tinted);
+}
+
+.avatar-wrapper {
+    display: flex;
+    justify-content: center;  /* horizontally center */
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiBase = '/api';
+const apiBase = 'http://localhost:21069/api';
 
 const getHeaders = (jwt, headers, params, body) => {
     const isFormData = body instanceof FormData;

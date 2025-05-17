@@ -1,0 +1,164 @@
+/* Make html and body take full height and remove default margin */
+html, body {
+    height: 100%;
+    margin: 0;
+
+    /*background-image: url('/public/assets/images/registerBackground.jpg');*/
+    /*background-size: cover;       !* cover whole container *!*/
+    /*background-position: center;  !* center the image *!*/
+    /*background-repeat: no-repeat; !* no repeating *!*/
+    /*background-attachment: fixed;*/
+
+    background: var(--color-bg);
+}
+
+/* Center content vertically and horizontally on body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.register-container {
+    position: relative;
+    width: 50vw;           /* Responsive width: 50% of viewport width */
+    max-width: 800px;      /* Max width to avoid too wide on large screens */
+    height: 60vh;          /* Responsive height: 60% of viewport height */
+    max-height: 700px;     /* Max height to limit size */
+
+    box-shadow: 1px 2px 2px #592941;
+    border: 0.1em solid #592941;
+    backdrop-filter: blur(4px);
+
+    border-radius: 30px;
+}
+
+/* Quickly Center Everything in Div */
+.cfb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Removed width: 100% to prevent stretching */
+}
+
+/* Banner Side of Container */
+.banner-side {
+    position: absolute;
+    z-index: 2;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-align: center;
+    transition: 2s;
+}
+
+/* Form Side of Container */
+.form-side {
+    position: absolute;
+    z-index: 1;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-form-bg);
+    color: var(--color-primary);
+    font-weight: bold;
+    transition: 2s;
+}
+
+/* Form Side Transitions */
+.send-right {
+    right: 0;
+}
+
+.send-left {
+    right: 35%;
+}
+
+/* Form and Label Layout */
+.form-comp {
+    flex-direction: column;
+}
+
+.sign-up-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-form > label {
+    padding: 0.5em;
+    width: 100%;
+}
+
+.sign-up-form > label > input {
+    width: 100%;
+}
+
+.banner-side.send-right {
+    right: 0;
+    border-radius: 0 30px 30px 0;
+}
+
+.banner-side:not(.send-right) {
+    right: 65%;
+    border-radius: 30px 0 0 30px;
+}
+
+.form-side.send-left {
+    right: 35%;
+    border-radius: 30px 0 0 30px;
+}
+
+.form-side:not(.send-left) {
+    right: 0;
+    border-radius: 0 30px 30px 0;
+}
+
+/* Button Styling */
+button {
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5em;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Input Styling */
+input {
+    padding: 0.5em;
+    border: 1px solid var(--color-primary);
+}
+
+.regTitle {
+    color: var(--color-text);
+    font-size: var(--font-size-title);
+    text-align: center;
+    width: 100%;
+}
+
+.theme-switcher-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* keep it above most other elements */
+}

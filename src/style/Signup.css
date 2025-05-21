@@ -1,30 +1,45 @@
 /* Signup.css */
-
 .signup-container {
-    width: 360px;
-    margin: 80px auto;
-    padding: 30px 40px;
+    width: 90%;
+    max-width: 360px;
+    margin: 0;
+    padding: 4vh 20px;
     text-align: center;
     color: var(--color-text);
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: fit-content;
+    max-height: 90vh;
+    overflow-y: auto;
+    flex-shrink: 1;
 }
 
 .signup-container h2 {
-    font-size: var(--font-size-title);
+    font-size: clamp(1.2rem, 4vw, 2rem);
     color: var(--color-primary);
-    margin-bottom: 40px;
+    margin-bottom: 4vh;
     margin-top: 0;
+    flex-shrink: 0;
 }
 
 .signup-container input {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
     padding: 12px;
-    font-size: var(--font-size-body);
+    font-size: clamp(0.9rem, 3vw, 1rem);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-btn);
     background-color: var(--color-form-bg);
     color: var(--color-text);
     transition: border-color 0.3s, background-color 0.3s;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .signup-container input:focus {
@@ -41,10 +56,12 @@
     border: none;
     border-radius: var(--border-radius-btn);
     cursor: pointer;
-    font-size: var(--font-size-body);
-    margin-top: 40px;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    margin-top: 3vh;
     transition: background-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 20px var(--color-shadow);
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 .signup-container .signup-button:hover {
@@ -62,8 +79,9 @@
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 2vh;
     flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 .signup-container .avatar-item {
@@ -79,11 +97,12 @@
 
 .signup-container .link-to-login {
     display: block;
-    margin-top: 30px;
+    margin-top: 2vh;
     color: var(--color-primary);
-    font-size: var(--font-size-small);
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
     text-decoration: none;
     transition: color 0.3s;
+    flex-shrink: 0;
 }
 
 .signup-container .link-to-login:hover {
@@ -92,5 +111,52 @@
 
 .avatar-wrapper {
     display: flex;
-    justify-content: center;  /* horizontally center */
+    justify-content: center;
+    margin: 2vh 0;
+    flex-shrink: 0;
+}
+
+/* File input styling */
+.signup-container input[type="file"] {
+    padding: 8px;
+}
+
+/* Alert container spacing */
+.signup-container .alert {
+    margin-top: 2vh;
+    flex-shrink: 0;
+}
+
+/* Small screen support */
+@media (max-width: 400px) {
+    .signup-container {
+        padding: 3vh 10px;
+    }
+}
+
+/* Very small height support */
+@media (max-height: 500px) {
+    .signup-container {
+        margin: 0;
+        padding: 2vh 15px;
+        min-height: unset;
+    }
+
+    .signup-container h2 {
+        margin-bottom: 2vh;
+    }
+
+    .signup-container input {
+        margin-bottom: 1.5vh;
+        padding: 8px;
+    }
+
+    .signup-container .signup-button {
+        margin-top: 2vh;
+        padding: 8px;
+    }
+
+    .avatar-wrapper {
+        margin: 1vh 0;
+    }
 }

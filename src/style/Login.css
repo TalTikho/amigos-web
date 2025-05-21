@@ -1,29 +1,64 @@
-/* Login.css */
-.login-container {
-    width: 360px;
-    margin: 100px auto;
-    padding: 30px 40px;
-    text-align: center;
+/* Global/Base Styles (place at the very top of your CSS or in a global stylesheet) */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     color: var(--color-text);
 }
 
-.login-container h2 {
-    font-size: var(--font-size-title);
-    color: var(--color-primary);
-    margin-bottom: 50px;
-    margin-top: -20px;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
+/* Login.css - Specific styles for your login component */
+.login-container {
+    width: 90%;
+    max-width: 360px;
+    margin: 0;
+    padding: 4vh 20px;
+    text-align: center;
+    color: var(--color-text);
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: fit-content;
+    max-height: 90vh;
+    overflow-y: auto;
+    flex-shrink: 1;
+}
+
+/* Title */
+.login-container h2 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    color: var(--color-primary);
+    margin-bottom: 4vh;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+/* Inputs */
 .login-container input {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
     padding: 12px;
-    font-size: var(--font-size-body);
+    font-size: clamp(0.9rem, 3vw, 1rem);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-btn);
     background-color: var(--color-form-bg);
     color: var(--color-text);
     transition: border-color 0.3s, background-color 0.3s;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .login-container input:focus {
@@ -32,6 +67,7 @@
     background-color: var(--color-form-bg-focused);
 }
 
+/* Button */
 .login-container .login-button {
     width: 100%;
     padding: 12px;
@@ -40,10 +76,12 @@
     border: none;
     border-radius: var(--border-radius-btn);
     cursor: pointer;
-    font-size: var(--font-size-body);
-    margin-top: 40px;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    margin-top: 3vh;
     transition: background-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 20px var(--color-shadow);
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 .login-container .login-button:hover {
@@ -55,4 +93,40 @@
     background-color: var(--color-primary-outline);
     cursor: not-allowed;
     box-shadow: none;
+}
+
+/* Alert container spacing */
+.login-container .alert {
+    margin-top: 2vh;
+    flex-shrink: 0;
+}
+
+/* Small screen support */
+@media (max-width: 400px) {
+    .login-container {
+        padding: 3vh 10px;
+    }
+}
+
+/* Very small height support */
+@media (max-height: 500px) {
+    .login-container {
+        margin: 0;
+        padding: 2vh 15px;
+        min-height: unset;
+    }
+
+    .login-container h2 {
+        margin-bottom: 2vh;
+    }
+
+    .login-container input {
+        margin-bottom: 1.5vh;
+        padding: 8px;
+    }
+
+    .login-container .login-button {
+        margin-top: 2vh;
+        padding: 8px;
+    }
 }

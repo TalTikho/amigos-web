@@ -1,0 +1,166 @@
+/* MessageBubble.css - Updated version */
+
+.message-bubble-container {
+    display: flex;
+    margin-bottom: 8px;
+    position: relative;
+    padding: 2px 30px 2px 2px; /* Add padding to create space for the menu button */
+}
+
+/* Aligns sent messages to the right */
+.message-sent {
+    justify-content: flex-end;
+}
+
+/* Aligns received messages to the left */
+.message-received {
+    justify-content: flex-start;
+    padding: 2px 2px 2px 30px; /* Adjust padding for received messages */
+}
+
+.message-bubble {
+    max-width: 65%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for sent message bubbles */
+.message-sent .message-bubble {
+    background-color: #dcf8c6; /* Fallback if variables not loaded */
+    background-color: var(--bg-message-sent, #dcf8c6);
+    border-top-right-radius: 0;
+}
+
+/* Styling for received message bubbles */
+.message-received .message-bubble {
+    background-color: #ffffff; /* Fallback if variables not loaded */
+    background-color: var(--bg-message-received, #ffffff);
+    border-top-left-radius: 0;
+}
+
+.message-text {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #1a1a1a; /* Fallback */
+    color: var(--text-primary, #1a1a1a);
+}
+
+.forwarded-label {
+    font-size: 12px;
+    color: #667781; /* Fallback */
+    color: var(--text-secondary, #667781);
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.message-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+}
+
+.message-timestamp {
+    font-size: 11px;
+    color: #667781; /* Fallback */
+    color: var(--text-secondary, #667781);
+}
+
+.edited-indicator {
+    font-size: 11px;
+    color: #667781; /* Fallback */
+    color: var(--text-secondary, #667781);
+    font-style: italic;
+}
+
+/* Message options toggle (three dots) */
+.message-options-toggle {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #667781; /* Fallback */
+    color: var(--text-secondary, #667781);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px 6px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* Position the dots button */
+.message-sent .message-options-toggle {
+    right: 5px;
+}
+
+.message-received .message-options-toggle {
+    left: 5px;
+}
+
+/* Show the options button on hover */
+.message-bubble-container:hover .message-options-toggle {
+    display: block;
+}
+
+/* Active state for the options button */
+.message-options-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Message actions dropdown */
+.message-actions {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff; /* Fallback */
+    background-color: var(--bg-sidebar, #ffffff);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    min-width: 120px;
+}
+
+/* Position the dropdown based on message type */
+.message-sent .message-actions {
+    right: 30px;
+}
+
+.message-received .message-actions {
+    left: 30px;
+}
+
+.message-actions button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a; /* Fallback */
+    color: var(--text-primary, #1a1a1a);
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.message-actions button:hover {
+    background-color: #f0f2f5; /* Fallback */
+    background-color: var(--input-bg, #f0f2f5);
+}
+
+/* Style for deleted messages */
+.message-deleted {
+  opacity: 0.7; /* Make deleted messages appear faded */
+  background-color: #f0f0f0 !important; /* Light gray background for deleted messages */
+}
+
+.message-deleted .message-text {
+  font-style: italic;
+  color: var(--text-secondary, #667781);
+}

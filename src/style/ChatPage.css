@@ -1,0 +1,213 @@
+/* ChatPage.css - Styling for the main chat page layout */
+
+/* Full page layout */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.chat-page {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+/* Sidebar styling */
+.chat-sidebar {
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--bg-sidebar);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 60px;
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--avatar-bg);
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.default-avatar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: var(--accent-color);
+}
+
+.theme-switch-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Chat search styling */
+.chat-search {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.search-input:focus {
+    outline: none;
+    background-color: var(--input-bg-focus);
+}
+
+/* Conversation panel container */
+.conversation-panel-container {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--bg-conversation);
+}
+
+/* Empty conversation styling */
+.empty-conversation {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-conversation);
+    color: var(--text-secondary);
+}
+
+.empty-conversation-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.app-logo {
+    margin-bottom: 20px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Chat list container - takes remaining height */
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.chat-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-list::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+.chat-list::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 6px;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .chat-page {
+        flex-direction: column;
+    }
+    
+    .chat-sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+    }
+    
+    .conversation-panel-container {
+        width: 100%;
+        height: calc(100vh - 60px);
+    }
+}
+
+/* CSS Variables for theming */
+:root {
+    /* Light theme */
+    --bg-main: #f0f2f5;
+    --bg-sidebar: #ffffff;
+    --bg-header: #ededed;
+    --bg-conversation: #e4e4e4;
+    --bg-message-sent: #dcf8c6;
+    --bg-message-received: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --accent-color: #007bff;
+    --border-color: #dddddd;
+    --input-bg: #f0f0f0;
+    --input-bg-focus: #e6e6e6;
+    --avatar-bg: #007bff;
+    --scrollbar-track: #f1f1f1;
+    --scrollbar-thumb: #c1c1c1;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --bg-main: #121212;
+    --bg-sidebar: #1e1e1e;
+    --bg-header: #2c2c2c;
+    --bg-conversation: #242424;
+    --bg-message-sent: #056162;
+    --bg-message-received: #262d31;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --accent-color: #00a884;
+    --border-color: #383838;
+    --input-bg: #323232;
+    --input-bg-focus: #3a3a3a;
+    --avatar-bg: #00a884;
+    --scrollbar-track: #2c2c2c;
+    --scrollbar-thumb: #555555;
+}

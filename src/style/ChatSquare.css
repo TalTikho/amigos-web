@@ -74,3 +74,30 @@
     border-color: var(--color-border-hover);
     box-shadow: 0 4px 20px var(--color-card-shadow);
 }
+/* Add these styles to your ChatSquare.css file */
+
+.chat-preview-container {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.sender-name {
+    font-weight: bold;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+.message-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.debug-info {
+    font-size: 9px;
+    color: #999;
+    margin-top: 2px;
+}

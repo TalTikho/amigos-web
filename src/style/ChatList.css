@@ -1,0 +1,28 @@
+.chat-list {
+  background-color: var(--bg-conversation);
+}
+
+.chat-list-item:hover {
+  background-color: var(--color-hover);
+}
+.chat-list-item.active {
+  background-color: var(--color-selected);
+}
+
+.chat-list-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+/* Message for when there are no chats */
+.no-chats-message {
+    padding: 20px;
+    text-align: center;
+    color: #8696a0;
+    font-size: 0.9rem;
+}
+
+/* Style for divider between chat items */
+.chat-list-item:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+}

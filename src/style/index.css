@@ -61,6 +61,7 @@
 
     /* Backgrounds */
     --color-bg: #1e1e2f;
+    --color-bg-hover: #2a2a3f;
     --color-popup-bg: #2a2a3f;
     --color-form-bg: #262D31;
     --color-form-bg-focused: #3a3a52;
@@ -103,6 +104,7 @@
 
     /* Backgrounds */
     --color-bg: #f8f5ff;
+    --color-bg-hover: #ececf1;
     --color-popup-bg: #f3e9ff;
     --color-form-bg: #ececec;
     --color-form-bg-focused: #e7d7ff;

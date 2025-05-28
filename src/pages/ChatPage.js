@@ -258,6 +258,8 @@ const ChatPage = () => {
                     onClose={() => setShowAlert(false)}
                 />
             )}
+
+            <button onClick={() => {navigate('/settings')}} />
         </div>
     );
 };

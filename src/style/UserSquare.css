@@ -1,0 +1,92 @@
+.user-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 15px;
+    border: 1px solid var(--color-text);
+    border-radius: 12px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    background-color: var(--color-bg);
+}
+
+.user-square:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    background-color: var(--color-bg-hover, #f9f9f9);
+}
+
+.user-square-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-square-name {
+    font-weight: bold;
+    text-align: left;
+}
+
+.user-dialog {
+    position: fixed;
+    z-index: 50;
+}
+
+.dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+    background: var(--color-bg);
+    border-radius: 12px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dialog-header {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 10px;
+}
+
+.back-arrow {
+    cursor: pointer;
+    color: var(--color-text);
+    width: 24px;
+    height: 24px;
+}
+
+.dialog-user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    justify-content: center;
+}
+
+.dialog-user-text h2 {
+    margin: 0;
+    font-size: var(--font-size-title);
+    color: var(--color-primary);
+}
+
+.dialog-user-text p {
+    margin: 5px 0 0 0;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+}

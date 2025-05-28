@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { UserProvider } from './services/UserContext';
 import RegisterContainer from './pages/RegisterContainer';
 import ChatPage from './pages/ChatPage';
+import UserSettings from './pages/UserSettings';
 
 /**
  * App - The main application component
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/" element={<ChatPage />} />
                     
                     {/* You can add more routes here as needed */}
+                    <Route path="/settings" element={<UserSettings />} />
                 </Routes>
             </BrowserRouter>
         </UserProvider>

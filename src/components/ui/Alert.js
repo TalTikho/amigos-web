@@ -40,7 +40,7 @@ const Alert = ({ message, type, onClose }) => {
         padding: '10px 20px',
         borderRadius: '5px',
         position: 'fixed',
-        bottom: '-100px',
+        bottom: '30px',
         left: '50%',
         transform: 'translateX(-50%)',
         marginBottom: '10px',

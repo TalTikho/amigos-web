@@ -164,3 +164,35 @@
   font-style: italic;
   color: var(--text-secondary, #667781);
 }
+
+/* Add this to your MessageBubble.css or relevant CSS file */
+
+.forwarded-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 4px;
+    font-style: italic;
+}
+
+.forwarded-icon {
+    margin-right: 4px;
+    font-size: 0.9em;
+}
+
+.forwarded-text {
+    font-weight: 500;
+}
+
+/* Optional: Add a subtle border or background for forwarded messages */
+.message-bubble.forwarded {
+    border-left: 3px solid #007bff;
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* For sent messages that are forwarded */
+.message-bubble.sent.forwarded {
+    border-left: 3px solid #28a745;
+    background-color: rgba(40, 167, 69, 0.05);
+}

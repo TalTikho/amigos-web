@@ -175,7 +175,7 @@ const ConversationPanel = ({
             {/* Header with contact/group info */}
             <div className="conversation-header">
                 <div className="conversation-avatar">
-                    <AvatarCircle src={chat.avatarUrl} radius="40px" />
+                    <AvatarCircle src={chat.photo} radius="40px" />
                 </div>
                 <div className="conversation-info">
                     <h3>{chat.name}</h3>

@@ -51,7 +51,7 @@ const UserSettings = () => {
                 setError(response.data.error);
                 setAlertType('error');
             }
-        } catch(error) {
+        } catch (error) {
             setShowAlert(true);
             const errorMsg =
                 error.response?.data?.error ||
@@ -118,8 +118,12 @@ const UserSettings = () => {
                                 onChange={(e) => {
                                     const file = e.target.files[0];
                                     if (file) {
-                                        const imageURL = URL.createObjectURL(file);
-                                        setFormData({ ...formData, profile_pic: imageURL });
+                                        const reader = new FileReader();
+                                        reader.onload = (event) => {
+                                            const base64String = event.target.result;
+                                            setFormData({ ...formData, profile_pic: base64String });
+                                        };
+                                        reader.readAsDataURL(file);
                                     }
                                 }}
                             />
@@ -174,7 +178,7 @@ const UserSettings = () => {
                 )}
 
                 {activeTab === 'contacts' && (
-                    <UserSquare userId={user._id}/>
+                    <UserSquare userId={user._id} />
                 )}
             </div>
         </div>

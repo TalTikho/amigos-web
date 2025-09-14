@@ -1,0 +1,266 @@
+/* ----------------------------------------------------
+   ChatDetails.css – full‑width layout, variable colours
+   ---------------------------------------------------- */
+
+/* ROOT – fill viewport */
+.chat-details {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-conversation);
+  color: var(--text-primary);
+  font-family: "Segoe UI", sans-serif;
+  overflow-y: auto;
+}
+
+/* ───────── Header ───────── */
+.chat-details-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 10;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+.chat-details-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ───────── Centered profile section ───────── */
+.chat-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2.5rem 1.5rem 1.25rem;
+  background: var(--bg-sidebar);
+}
+
+.chat-avatar { margin-bottom: 0.75rem; }
+
+.chat-info {
+  text-align: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.chat-name {
+  margin: 0.25rem 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.chat-description { margin-top: 0.25rem; font-size: 0.95rem; }
+
+.description-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.description-text { margin: 0; }
+
+.edit-description-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.description-textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  resize: vertical;
+  font-size: 0.95rem;
+}
+
+.description-actions {
+  margin-top: 0.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 0.45rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.cancel-btn {
+  background: var(--input-bg);
+  color: var(--text-primary);
+}
+
+/* Stats row */
+.chat-stats {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* ───────── Tabs ───────── */
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  background: var(--bg-sidebar);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+  padding: 0.6rem 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+}
+
+.tab-btn.active {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* ───────── Tab content ───────── */
+.tab-content {
+  flex: 1;
+  width: 100%;
+  padding: 1.5rem min(2.5vw, 32px);
+  box-sizing: border-box;
+  background: var(--bg-conversation);
+}
+
+/* ───────── Chat settings card ───────── */
+.chat-settings {
+  width: 100%;
+  background: var(--bg-sidebar);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.settings-section { margin-bottom: 1.75rem; }
+
+.settings-section h4 {
+  margin: 0 0 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0;
+}
+
+.toggle-btn {
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-sidebar);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.toggle-btn.active {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+/* Danger zone */
+.danger-section { border-top: 1px solid var(--border-color); padding-top: 1rem; }
+
+.danger-btn {
+  background: #d93636;    /* Keeping red for emphasis */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ───────── Loading & Error screens ───────── */
+.chat-details-loading,
+.chat-details-error {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-conversation);
+  z-index: 50;
+}
+
+.loading-spinner {
+  width: 46px;
+  height: 46px;
+  border: 4px solid var(--border-color);
+  border-top: 4px solid var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.2rem;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.back-btn {           /* error screen button */
+  margin-top: 1rem;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .chat-name { font-size: 1.35rem; }
+  .tab-navigation { gap: 1.25rem; }
+  .tab-btn { font-size: 0.95rem; }
+}

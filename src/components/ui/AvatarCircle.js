@@ -10,7 +10,7 @@ class AvatarCircle extends React.Component {
     constructor(props) {
         super(props);
 
-        this.defaultAvatar = window.location.origin + "/assets/images/example_img.jpeg";
+        this.defaultAvatar = window.location.origin + "/assets/images/default_chat_picture.png";
 
         // get the radius and the func from the props
         const { radius = this.defaultRadius, func = null } = props;

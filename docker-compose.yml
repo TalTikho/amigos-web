@@ -1,0 +1,20 @@
+services:
+  amigos-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: amigos-web
+    container_name: amigos-web
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/src
+      - /src/node_modules
+    networks:
+      - web-network
+
+networks:
+  web-network:
+    driver: bridge

@@ -4,6 +4,8 @@ import { UserProvider } from './services/UserContext';
 import RegisterContainer from './pages/RegisterContainer';
 import ChatPage from './pages/ChatPage';
 import UserSettings from './pages/UserSettings';
+import ChatDetails from './pages/ChatDetails';
+
 
 /**
  * App - The main application component
@@ -24,6 +26,8 @@ function App() {
                     
                     {/* You can add more routes here as needed */}
                     <Route path="/settings" element={<UserSettings />} />
+                    <Route path="/chat/:chatId/details" element={<ChatDetails />} />
+
                 </Routes>
             </BrowserRouter>
         </UserProvider>
